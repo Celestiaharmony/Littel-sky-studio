@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Little Sky Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* Kalau foto tidak ketemu, coba nama/ekstensi alternatif (tanpa -1, .jpeg, .png, .JPG) sebelum disembunyikan */
+function fb(i){var o=i.dataset.o||i.getAttribute("src");i.dataset.o=o;var b=o.replace(/\.jpg$/i,""),a=b.replace(/-1$/,""),n=+i.dataset.n||0,c=[a+".jpg",b+".jpeg",a+".jpeg",b+".png",a+".png",b+".JPG",a+".JPG"];if(n<c.length){i.dataset.n=n+1;i.src=c[n]}else i.remove()}
+</script>
+</head>
+<body>
+<nav><div class="in"><b>Little Sky Studio</b><button id="burger" aria-label="Buka menu" aria-expanded="false">☰</button>
+<ul id="menu"><li><a href="#hero">Cover</a></li><li><a href="#about">About</a></li><li><a href="#works">Works</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#skills">Skills</a></li><li><a href="#journey">Journey</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<section id="hero">
+<div>
+<p class="hand">Personal Portfolio &amp; Creative Journal ✦</p>
+<h1>A little sky, a thousand possibilities.</h1>
+<p>Hi, aku <b>Sayidatul Ghoni</b>. Aku membuat website yang menyimpan cerita, kenangan, dan ide.</p>
+<a class="btn" href="#about">Explore My World</a><a class="btn alt" href="#works">View My Works</a>
+</div>
+<div class="collage" aria-hidden="true">
+<div class="pol p1"><i>☁️<img src="assets/my-world-1.jpg" alt="" onerror="fb(this)"></i>my world</div><div class="pol p2"><i>✨<img src="assets/ideas-1.jpg" alt="" onerror="fb(this)"></i>ideas</div>
+<div class="pol p3"><i>🌷<img src="assets/moment.jpg" alt="" onerror="fb(this)"></i>moment</div><div class="pol p4"><i>📷<img src="assets/langit-2.jpg" alt="" onerror="fb(this)"></i>snapshots</div>
+</div>
+</section>
+
+<section id="about" class="rv">
+<h2><small>01</small>About Me</h2>
+<div class="paper about">
+<div class="pol" style="position:relative;width:180px;transform:rotate(-3deg)"><i style="height:190px;line-height:190px">🧑‍🎓<img src="assets/about-me.jpg" alt="Foto Sayidatul Ghoni" onerror="fb(this)"></i>Ghoni ✿</div>
+<div>
+<p>Aku mahasiswa Sistem Informasi yang tertarik pada web development, desain, dan proyek kreatif. Bagiku, website bukan hanya tampilan, tetapi cara untuk menyimpan kenangan, menyampaikan perasaan, dan menghubungkan orang dengan cerita.</p>
+<div class="chips"><span class="chip">Sistem Informasi</span><span class="chip">Web Development</span><span class="chip">Desain</span><span class="chip">Proyek Kreatif</span></div>
+<p>Melalui Little Sky Studio, aku ingin menunjukkan bahwa teknologi bisa terasa hangat, personal, dan penuh imajinasi.</p>
+<details class="note"><summary>Creative Journal ✎</summary><p style="margin:8px 0 0">Di sini aku menyimpan proses di balik proyekku: moodboard, screenshot desain, foto, kutipan favorit, dan catatan kecil tentang apa yang aku pelajari.</p><p class="hand" style="margin:8px 0 0">Karena bagi aku, setiap website dimulai dari sebuah cerita.</p></details>
+</div></div>
+</section>
+
+<section id="works" class="rv">
+<h2><small>02</small>My Projects</h2><p>Website yang aku buat untuk menyimpan kenangan, mengumpulkan pesan, dan mengubah cerita menjadi pengalaman digital.</p>
+<div class="filters" role="group" aria-label="Filter kategori"></div>
+<div class="grid"></div>
+<dialog id="dlg"><img id="dimg" alt="" style="width:100%;max-height:230px;object-fit:cover;object-position:top;border-radius:4px;margin-bottom:10px"><h3 id="dt"></h3><span class="cat" id="dc"></span><p id="dd"></p><b>Fitur:</b><ul id="dft" style="margin:6px 0 10px;padding-left:20px"></ul><p class="hand" id="dtool"></p><a id="dl" class="btn" target="_blank" rel="noopener">Kunjungi website ↗</a><button class="btn alt" id="dx">Tutup</button></dialog>
+</section>
+
+<section id="gallery" class="rv">
+<h2><small>03</small>Gallery</h2>
+<p>Potongan dunia yang aku abadikan: langit, bunga, bangunan, dan hal-hal kecil lainnya.</p>
+<div class="filters" id="gf" role="group" aria-label="Filter galeri"></div>
+<div class="grid" id="gg"></div>
+<dialog id="lb"><img id="lbi" alt=""><p class="hand" id="lbc"></p><button class="btn alt" id="lbx">Tutup</button></dialog>
+</section>
+
+<section id="skills" class="rv">
+<h2><small>04</small>What I Can Do</h2>
+<div class="skills">
+<div class="paper"><h3>Web Development</h3><div data-skills="HTML:20,CSS:20,JavaScript:20,VS Code:35"></div></div>
+<div class="paper"><h3>Creative Skills</h3><div data-skills="UI Design:20,Digital Scrapbook:35,Photography:45,Content Ideas:20"></div></div>
+<div class="paper"><h3>Information Systems</h3><div data-skills="Concept of Systems:15,Data Management:15,Google Sheets:20"></div></div>
+</div>
+
+</section>
+
+<section id="journey" class="rv">
+<h2><small>05</small>Currently Building</h2>
+<div class="tl">
+<div><b>Proyek</b>A Love Letter to BOY STORY: arsip pesan interaktif dari para BOSS.</div>
+<div><b>Proyek</b>Memories We Keep: website kenangan untuk teman-teman SMA.</div>
+<div><b>Lanjutan</b>Memories That Keep Moving: living archive yang terus berkembang.</div>
+<div><b>Sekarang · In Progress</b>Little Sky Studio, ruang kreatif yang menggabungkan web development, desain, fotografi, dan cerita pribadi.</div>
+</div>
+</section>
+
+<section id="contact" class="rv" style="text-align:center">
+<h2><small>06</small>Let’s Create Something Together</h2><p>Tertarik berkolaborasi, berdiskusi tentang web development, atau sekadar melihat proyek-proyekku?</p>
+<button class="env" id="env" aria-expanded="false"><div class="box"><div class="letter"><b>Hai! 💌</b><br>Terima kasih sudah mampir. Yuk berkolaborasi atau ngobrol soal web development!</div><div class="flap"></div><div class="hint">klik untuk membuka</div></div></button>
+<div class="links"><a class="btn alt" href="mailto:celestialharmonyboss@gmail.com">Email</a><a class="btn alt" href="https://github.com/Celestiaharmony" target="_blank" rel="noopener">GitHub</a><a class="btn alt" href="https://instagram.com/celestialharmonyboss" target="_blank" rel="noopener">Instagram</a></div><p><a class="btn" href="mailto:celestialharmonyboss@gmail.com">Send Me a Message</a></p>
+</section>
+
+<footer><span class="hand">Made with ☁️ by Sayidatul Ghoni · Little Sky Studio © 2026</span></footer>
+<button id="top" aria-label="Kembali ke atas">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
